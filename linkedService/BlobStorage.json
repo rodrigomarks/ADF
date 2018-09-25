@@ -1,0 +1,15 @@
+{
+	"name": "BlobStorage",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"type": "AzureBlobStorage",
+		"typeProperties": {
+			"connectionString": "DefaultEndpointsProtocol=https;AccountName=adsblob;",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJhMTk0NzZhNi1hMzJhLTQ4MTEtYjZlMS1kZTNkMDI1NmIwOWYiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "integration",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

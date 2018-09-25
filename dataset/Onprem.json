@@ -1,0 +1,24 @@
+{
+	"name": "Onprem",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "FileServer",
+			"type": "LinkedServiceReference"
+		},
+		"type": "FileShare",
+		"typeProperties": {
+			"format": {
+				"type": "TextFormat",
+				"columnDelimiter": ",",
+				"rowDelimiter": "",
+				"nullValue": "\\N",
+				"encodingName": null,
+				"treatEmptyAsNull": true,
+				"skipLineCount": 0,
+				"firstRowAsHeader": true
+			},
+			"folderPath": "2017"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
