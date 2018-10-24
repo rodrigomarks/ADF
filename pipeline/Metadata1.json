@@ -63,8 +63,8 @@
 				}
 			},
 			{
-				"name": "Get Metadata1",
-				"type": "GetMetadata",
+				"name": "Web1",
+				"type": "WebActivity",
 				"dependsOn": [
 					{
 						"activity": "Onprem2Blob",
@@ -79,12 +79,6 @@
 					"retryIntervalInSeconds": 30,
 					"secureOutput": false,
 					"secureInput": false
-				},
-				"typeProperties": {
-					"dataset": {
-						"referenceName": "Blob",
-						"type": "DatasetReference"
-					}
 				}
 			}
 		]
