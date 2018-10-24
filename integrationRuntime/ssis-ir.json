@@ -24,13 +24,6 @@
 					},
 					"catalogPricingTier": "Basic"
 				},
-				"customSetupScriptProperties": {
-					"blobContainerUri": "https://adsblob.blob.core.windows.net/blobstorage1",
-					"sasToken": {
-						"type": "SecureString",
-						"value": "**********"
-					}
-				},
 				"edition": "Enterprise",
 				"licenseType": "LicenseIncluded"
 			}
