@@ -5,7 +5,7 @@
 		"pipelines": [
 			{
 				"pipelineReference": {
-					"referenceName": "Metadata1",
+					"referenceName": "Demo1",
 					"type": "PipelineReference"
 				}
 			}
@@ -13,9 +13,9 @@
 		"type": "ScheduleTrigger",
 		"typeProperties": {
 			"recurrence": {
-				"frequency": "Hour",
-				"interval": 24,
-				"startTime": "2018-08-15T14:00:00.314Z",
+				"frequency": "Day",
+				"interval": 1,
+				"startTime": "2018-10-01T21:00:00.000Z",
 				"timeZone": "UTC"
 			}
 		}
