@@ -17,7 +17,11 @@
 				"skipLineCount": 0,
 				"firstRowAsHeader": true
 			},
-			"folderPath": "2017"
+			"fileName": "FlightsAndWeather.csv",
+			"folderPath": {
+				"value": "2017/&{month}",
+				"type": "Expression"
+			}
 		}
 	},
 	"type": "Microsoft.DataFactory/factories/datasets"
