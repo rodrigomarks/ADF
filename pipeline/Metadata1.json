@@ -79,6 +79,9 @@
 					"retryIntervalInSeconds": 30,
 					"secureOutput": false,
 					"secureInput": false
+				},
+				"typeProperties": {
+					"method": "POST"
 				}
 			}
 		]
