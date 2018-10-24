@@ -1,1 +1,51 @@
-{}
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adsdf"
+		},
+		"integrationRuntime_integration": {
+			"value": "integration"
+		},
+		"integrationRuntime_ssis-ir": {
+			"value": "ssis-ir"
+		},
+		"AzureDatabricks1_accessToken": {
+			"value": ""
+		},
+		"BlobStorage_connectionString": {
+			"value": ""
+		},
+		"FileServer_password": {
+			"value": ""
+		},
+		"Blob_properties_typeProperties_fileName": {
+			"value": ""
+		},
+		"Blob_properties_typeProperties_folderPath": {
+			"value": "flightdelay"
+		},
+		"Onprem_properties_typeProperties_fileName": {
+			"value": "FlightsAndWeather.csv"
+		},
+		"Onprem_properties_typeProperties_folderPath": {
+			"value": "2017/03"
+		},
+		"FileServer_properties_typeProperties_userId": {
+			"value": "southamerica\\romarqu"
+		},
+		"', parameters('integrationRuntime_ssis-ir'_properties_typeProperties_ssisProperties_catalogInfo_catalogServerEndpoint": {
+			"value": "mtcqlserver.database.windows.net"
+		},
+		"', parameters('integrationRuntime_ssis-ir'_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminUserName": {
+			"value": "sqladmin"
+		},
+		"', parameters('integrationRuntime_ssis-ir'_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminPassword": {
+			"value": ""
+		},
+		"', parameters('integrationRuntime_ssis-ir'_properties_typeProperties_ssisProperties_customSetupScriptProperties_sasToken": {
+			"value": ""
+		}
+	}
+}
