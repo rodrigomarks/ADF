@@ -18,10 +18,7 @@
 				"firstRowAsHeader": true
 			},
 			"fileName": "FlightsAndWeather.csv",
-			"folderPath": {
-				"value": "2017/&{month}",
-				"type": "Expression"
-			}
+			"folderPath": "2017/03"
 		}
 	},
 	"type": "Microsoft.DataFactory/factories/datasets"
