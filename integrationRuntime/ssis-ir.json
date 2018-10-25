@@ -8,7 +8,7 @@
 				"location": "East US",
 				"nodeSize": "Standard_D1_v2",
 				"numberOfNodes": 2,
-				"maxParallelExecutionsPerNode": 2,
+				"maxParallelExecutionsPerNode": 1,
 				"vNetProperties": {
 					"vNetId": "/subscriptions/00a1dc15-3df6-4355-90d9-775d6c76abf3/resourceGroups/mtcspds/providers/Microsoft.Network/virtualNetworks/vnet-sqlmi",
 					"subnet": "default"
