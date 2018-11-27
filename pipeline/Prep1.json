@@ -37,7 +37,7 @@
 				]
 			},
 			{
-				"name": "Copy Data1",
+				"name": "Blob2SQL",
 				"type": "Copy",
 				"dependsOn": [
 					{
@@ -55,12 +55,32 @@
 					"secureInput": false
 				},
 				"typeProperties": {
+					"source": {
+						"type": "BlobSource",
+						"recursive": true
+					},
+					"sink": {
+						"type": "SqlSink",
+						"writeBatchSize": 10000
+					},
 					"enableStaging": false,
 					"dataIntegrationUnits": 0
-				}
+				},
+				"inputs": [
+					{
+						"referenceName": "Blob",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "AzureSqlTable",
+						"type": "DatasetReference"
+					}
+				]
 			},
 			{
-				"name": "Web1",
+				"name": "Email",
 				"type": "WebActivity",
 				"dependsOn": [
 					{
