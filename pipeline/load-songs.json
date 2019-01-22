@@ -60,6 +60,48 @@
 					"referenceName": "AzDatabricks",
 					"type": "LinkedServiceReference"
 				}
+			},
+			{
+				"name": "Blob2SQL",
+				"type": "Copy",
+				"dependsOn": [
+					{
+						"activity": "BlobScala",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"source": {
+						"type": "BlobSource",
+						"recursive": true
+					},
+					"sink": {
+						"type": "SqlSink",
+						"writeBatchSize": 10000
+					},
+					"enableStaging": false
+				},
+				"inputs": [
+					{
+						"referenceName": "AzureBlob",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "AzureSQL",
+						"type": "DatasetReference"
+					}
+				]
 			}
 		]
 	},

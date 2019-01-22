@@ -1,0 +1,13 @@
+{
+	"name": "AzureSQL",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSQL",
+			"type": "LinkedServiceReference"
+		},
+		"type": "AzureSqlTable",
+		"typeProperties": {
+			"tableName": "[SalesLT].[Produto]"
+		}
+	}
+}
