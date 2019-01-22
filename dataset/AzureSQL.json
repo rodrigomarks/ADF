@@ -6,6 +6,32 @@
 			"type": "LinkedServiceReference"
 		},
 		"type": "AzureSqlTable",
+		"structure": [
+			{
+				"name": "ProdutoID",
+				"type": "Int32"
+			},
+			{
+				"name": "Produto",
+				"type": "String"
+			},
+			{
+				"name": "Categoria",
+				"type": "String"
+			},
+			{
+				"name": "Segmento",
+				"type": "String"
+			},
+			{
+				"name": "FabricanteID",
+				"type": "Int32"
+			},
+			{
+				"name": "Fabricante",
+				"type": "String"
+			}
+		],
 		"typeProperties": {
 			"tableName": "[SalesLT].[Produto]"
 		}
