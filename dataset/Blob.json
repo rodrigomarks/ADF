@@ -5,6 +5,9 @@
 			"referenceName": "BlobStorage",
 			"type": "LinkedServiceReference"
 		},
+		"folder": {
+			"name": "demo"
+		},
 		"type": "AzureBlob",
 		"typeProperties": {
 			"format": {
