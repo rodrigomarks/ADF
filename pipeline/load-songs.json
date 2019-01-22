@@ -5,14 +5,6 @@
 			{
 				"name": "Local2Cloud",
 				"type": "Copy",
-				"dependsOn": [
-					{
-						"activity": "Blob2SQL",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
 				"policy": {
 					"timeout": "7.00:00:00",
 					"retry": 0,
@@ -150,6 +142,14 @@
 			{
 				"name": "SP_Delete_Prod",
 				"type": "SqlServerStoredProcedure",
+				"dependsOn": [
+					{
+						"activity": "ETL",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "7.00:00:00",
 					"retry": 0,
