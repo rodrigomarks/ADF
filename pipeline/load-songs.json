@@ -54,10 +54,7 @@
 					"secureInput": true
 				},
 				"typeProperties": {
-					"notebookPath": "/lab1/blobscala",
-					"baseParameters": {
-						"name": "@pipeline().parameters.name"
-					}
+					"notebookPath": "/lab1/blobscala"
 				},
 				"linkedServiceName": {
 					"referenceName": "AzDatabricks",
