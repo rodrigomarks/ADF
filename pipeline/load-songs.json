@@ -74,7 +74,7 @@
 				"type": "Copy",
 				"dependsOn": [
 					{
-						"activity": "Stored Procedure1",
+						"activity": "SP_Delete_Prod",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -148,7 +148,7 @@
 				}
 			},
 			{
-				"name": "Stored Procedure1",
+				"name": "SP_Delete_Prod",
 				"type": "SqlServerStoredProcedure",
 				"policy": {
 					"timeout": "7.00:00:00",
