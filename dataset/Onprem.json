@@ -5,6 +5,9 @@
 			"referenceName": "FileServer",
 			"type": "LinkedServiceReference"
 		},
+		"folder": {
+			"name": "demo"
+		},
 		"type": "FileShare",
 		"typeProperties": {
 			"format": {
