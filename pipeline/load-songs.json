@@ -38,6 +38,14 @@
 			{
 				"name": "BlobScala",
 				"type": "DatabricksNotebook",
+				"dependsOn": [
+					{
+						"activity": "Local2Cloud",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "7.00:00:00",
 					"retry": 0,
