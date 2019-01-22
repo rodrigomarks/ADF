@@ -36,7 +36,7 @@
 				]
 			},
 			{
-				"name": "BlobScala",
+				"name": "ETL",
 				"type": "DatabricksNotebook",
 				"dependsOn": [
 					{
@@ -66,7 +66,7 @@
 				"type": "Copy",
 				"dependsOn": [
 					{
-						"activity": "BlobScala",
+						"activity": "ETL",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -115,7 +115,7 @@
 				]
 			},
 			{
-				"name": "Web1",
+				"name": "EmailFail",
 				"type": "WebActivity",
 				"dependsOn": [
 					{
@@ -125,7 +125,7 @@
 						]
 					},
 					{
-						"activity": "BlobScala",
+						"activity": "ETL",
 						"dependencyConditions": [
 							"Failed"
 						]
