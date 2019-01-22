@@ -51,13 +51,10 @@
 					"retry": 0,
 					"retryIntervalInSeconds": 30,
 					"secureOutput": false,
-					"secureInput": false
+					"secureInput": true
 				},
 				"typeProperties": {
-					"notebookPath": "/lab1/blobscala",
-					"baseParameters": {
-						"input": "@pipeline().parameters.name"
-					}
+					"notebookPath": "/lab1/blobscala"
 				},
 				"linkedServiceName": {
 					"referenceName": "AzDatabricks",
