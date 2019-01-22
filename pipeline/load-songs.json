@@ -5,6 +5,14 @@
 			{
 				"name": "Local2Cloud",
 				"type": "Copy",
+				"dependsOn": [
+					{
+						"activity": "Blob2SQL",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "7.00:00:00",
 					"retry": 0,
@@ -64,14 +72,6 @@
 			{
 				"name": "Blob2SQL",
 				"type": "Copy",
-				"dependsOn": [
-					{
-						"activity": "ETL",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
 				"policy": {
 					"timeout": "7.00:00:00",
 					"retry": 0,
