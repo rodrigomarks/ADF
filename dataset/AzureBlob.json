@@ -40,7 +40,7 @@
 				"nullValue": "\\N",
 				"treatEmptyAsNull": true,
 				"skipLineCount": 0,
-				"firstRowAsHeader": false
+				"firstRowAsHeader": true
 			},
 			"fileName": "Produtos.csv",
 			"folderPath": "demo/temp"
