@@ -87,7 +87,8 @@
 					"sink": {
 						"type": "SqlSink",
 						"writeBatchSize": 10000,
-						"sqlWriterStoredProcedureName": "[dbo].[deleteProduto]"
+						"sqlWriterStoredProcedureName": "[dbo].[deleteProduto]",
+						"sqlWriterTableType": "Produto"
 					},
 					"enableStaging": false,
 					"translator": {
