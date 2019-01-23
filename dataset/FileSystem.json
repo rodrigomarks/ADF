@@ -1,0 +1,23 @@
+{
+	"name": "FileSystem",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "lnkFileShare",
+			"type": "LinkedServiceReference"
+		},
+		"type": "FileShare",
+		"typeProperties": {
+			"format": {
+				"type": "TextFormat",
+				"columnDelimiter": ",",
+				"rowDelimiter": "",
+				"nullValue": "\\N",
+				"treatEmptyAsNull": true,
+				"skipLineCount": 0,
+				"firstRowAsHeader": true
+			},
+			"fileName": "PdM_telemetry.csv",
+			"folderPath": "PM"
+		}
+	}
+}
