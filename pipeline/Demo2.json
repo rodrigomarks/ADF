@@ -1,0 +1,146 @@
+{
+	"name": "Demo2",
+	"properties": {
+		"activities": [
+			{
+				"name": "Local2Cloud",
+				"type": "Copy",
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"source": {
+						"type": "FileSystemSource",
+						"recursive": true
+					},
+					"sink": {
+						"type": "BlobSink"
+					},
+					"enableStaging": false
+				},
+				"inputs": [
+					{
+						"referenceName": "FileShare",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "AzureBlob",
+						"type": "DatasetReference"
+					}
+				]
+			},
+			{
+				"name": "ETL",
+				"type": "DatabricksNotebook",
+				"dependsOn": [
+					{
+						"activity": "Local2Cloud",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": true
+				},
+				"typeProperties": {
+					"notebookPath": "/lab1/blobscala"
+				},
+				"linkedServiceName": {
+					"referenceName": "AzDatabricks",
+					"type": "LinkedServiceReference"
+				}
+			},
+			{
+				"name": "Blob2SQL",
+				"type": "Copy",
+				"dependsOn": [
+					{
+						"activity": "SP_Delete_Prod",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"source": {
+						"type": "BlobSource",
+						"recursive": false
+					},
+					"sink": {
+						"type": "SqlSink",
+						"writeBatchSize": 10000
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"columnMappings": {
+							"Prop_0": "ProdutoID",
+							"Prop_1": "Produto",
+							"Prop_2": "Categoria",
+							"Prop_3": "Segmento",
+							"Prop_4": "FabricanteID",
+							"Prop_5": "Fabricante"
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "AzureBlob",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "AzureSQL",
+						"type": "DatasetReference"
+					}
+				]
+			},
+			{
+				"name": "SP_Delete_Prod",
+				"type": "SqlServerStoredProcedure",
+				"dependsOn": [
+					{
+						"activity": "ETL",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"storedProcedureName": "[dbo].[deleteProduto]"
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureSQL",
+					"type": "LinkedServiceReference"
+				}
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}
