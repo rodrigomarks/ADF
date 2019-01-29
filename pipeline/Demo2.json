@@ -34,6 +34,41 @@
 						"type": "DatasetReference"
 					}
 				]
+			},
+			{
+				"name": "ML Batch Execution1",
+				"type": "AzureMLBatchExecution",
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"webServiceInputs": {
+						"": {
+							"filePath": "",
+							"linkedServiceName": {
+								"referenceName": "AzureBlobStorage1",
+								"type": "LinkedServiceReference"
+							}
+						}
+					},
+					"webServiceOutputs": {
+						"": {
+							"filePath": "",
+							"linkedServiceName": {
+								"referenceName": "AzureBlobStorage2",
+								"type": "LinkedServiceReference"
+							}
+						}
+					}
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureML1",
+					"type": "LinkedServiceReference"
+				}
 			}
 		]
 	},
