@@ -1,3 +1,31 @@
 {
-	"name": "pipeline1"
+	"name": "BRK-demo1",
+	"properties": {
+		"activities": [
+			{
+				"name": "Local2Nuvem",
+				"type": "Copy",
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"source": {
+						"type": "FileSystemSource",
+						"recursive": true
+					},
+					"enableStaging": false
+				},
+				"inputs": [
+					{
+						"referenceName": "FileShare",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		]
+	}
 }
