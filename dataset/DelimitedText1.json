@@ -1,0 +1,77 @@
+{
+	"name": "DelimitedText1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "lnkBlob",
+			"type": "LinkedServiceReference"
+		},
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "FlightsAndWeather.csv",
+				"container": "staging"
+			},
+			"columnDelimiter": ","
+		},
+		"schema": [
+			{
+				"name": "_c0",
+				"type": "String"
+			},
+			{
+				"name": "_c1",
+				"type": "String"
+			},
+			{
+				"name": "_c2",
+				"type": "String"
+			},
+			{
+				"name": "_c3",
+				"type": "String"
+			},
+			{
+				"name": "_c4",
+				"type": "String"
+			},
+			{
+				"name": "_c5",
+				"type": "String"
+			},
+			{
+				"name": "_c6",
+				"type": "String"
+			},
+			{
+				"name": "_c7",
+				"type": "String"
+			},
+			{
+				"name": "_c8",
+				"type": "String"
+			},
+			{
+				"name": "_c9",
+				"type": "String"
+			},
+			{
+				"name": "_c10",
+				"type": "String"
+			},
+			{
+				"name": "_c11",
+				"type": "String"
+			},
+			{
+				"name": "_c12",
+				"type": "String"
+			},
+			{
+				"name": "_c13",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
