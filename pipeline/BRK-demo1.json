@@ -17,11 +17,20 @@
 						"type": "FileSystemSource",
 						"recursive": true
 					},
+					"sink": {
+						"type": "BlobSink"
+					},
 					"enableStaging": false
 				},
 				"inputs": [
 					{
-						"referenceName": "FileShare",
+						"referenceName": "Local",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "AzureBlob",
 						"type": "DatasetReference"
 					}
 				]
