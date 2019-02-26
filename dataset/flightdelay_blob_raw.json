@@ -6,64 +6,6 @@
 			"type": "LinkedServiceReference"
 		},
 		"type": "AzureBlob",
-		"structure": [
-			{
-				"name": "OriginAirportCode",
-				"type": "String"
-			},
-			{
-				"name": "Month",
-				"type": "String"
-			},
-			{
-				"name": "DayofMonth",
-				"type": "String"
-			},
-			{
-				"name": "CRSDepHour",
-				"type": "String"
-			},
-			{
-				"name": "DayOfWeek",
-				"type": "String"
-			},
-			{
-				"name": "Carrier",
-				"type": "String"
-			},
-			{
-				"name": "DestAirportCode",
-				"type": "String"
-			},
-			{
-				"name": "DepDel15",
-				"type": "String"
-			},
-			{
-				"name": "Mes",
-				"type": "String"
-			},
-			{
-				"name": "Dia",
-				"type": "String"
-			},
-			{
-				"name": "Hora",
-				"type": "String"
-			},
-			{
-				"name": "WindSpeed",
-				"type": "String"
-			},
-			{
-				"name": "SeaLevelPressure",
-				"type": "String"
-			},
-			{
-				"name": "HourlyPrecip",
-				"type": "String"
-			}
-		],
 		"typeProperties": {
 			"format": {
 				"type": "TextFormat",
