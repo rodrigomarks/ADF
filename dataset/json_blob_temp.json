@@ -11,7 +11,7 @@
 				"type": "JsonFormat",
 				"filePattern": "setOfObjects"
 			},
-			"fileName": "",
+			"fileName": "small_radio.json",
 			"folderPath": "temp/json"
 		}
 	}
