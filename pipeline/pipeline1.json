@@ -13,8 +13,18 @@
 					"secureInput": false
 				},
 				"typeProperties": {
+					"source": {
+						"type": "BlobSource",
+						"recursive": true
+					},
 					"enableStaging": false
-				}
+				},
+				"inputs": [
+					{
+						"referenceName": "flightdelay_blob_temp",
+						"type": "DatasetReference"
+					}
+				]
 			}
 		],
 		"folder": {
