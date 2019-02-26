@@ -18,25 +18,10 @@
 						"recursive": true
 					},
 					"sink": {
-						"type": "BlobSink"
+						"type": "BlobSink",
+						"copyBehavior": "MergeFiles"
 					},
-					"enableStaging": false,
-					"translator": {
-						"type": "TabularTranslator",
-						"columnMappings": {
-							"OriginAirportCode": "OriginAirportCode",
-							"Month": "Month",
-							"DayofMonth": "DayofMonth",
-							"CRSDepHour": "CRSDepHour",
-							"DayOfWeek": "DayOfWeek",
-							"Carrier": "Carrier",
-							"DestAirportCode": "DestAirportCode",
-							"DepDel15": "DepDel15",
-							"WindSpeed": "WindSpeed",
-							"SeaLevelPressure": "SeaLevelPressure",
-							"HourlyPrecip": "HourlyPrecip"
-						}
-					}
+					"enableStaging": false
 				},
 				"inputs": [
 					{
