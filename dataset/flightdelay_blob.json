@@ -1,0 +1,25 @@
+{
+	"name": "flightdelay_blob",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "lnkblobrodrigo",
+			"type": "LinkedServiceReference"
+		},
+		"type": "AzureBlob",
+		"typeProperties": {
+			"format": {
+				"type": "TextFormat",
+				"columnDelimiter": ",",
+				"rowDelimiter": "",
+				"quoteChar": "\"",
+				"nullValue": "\\N",
+				"encodingName": null,
+				"treatEmptyAsNull": true,
+				"skipLineCount": 0,
+				"firstRowAsHeader": true
+			},
+			"fileName": "",
+			"folderPath": "temp/2018"
+		}
+	}
+}
