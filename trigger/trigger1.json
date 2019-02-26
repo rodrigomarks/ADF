@@ -5,12 +5,6 @@
 		"pipelines": [
 			{
 				"pipelineReference": {
-					"referenceName": "Teste",
-					"type": "PipelineReference"
-				}
-			},
-			{
-				"pipelineReference": {
 					"referenceName": "Demo2",
 					"type": "PipelineReference"
 				}
