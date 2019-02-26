@@ -17,11 +17,36 @@
 						"type": "BlobSource",
 						"recursive": true
 					},
-					"enableStaging": false
+					"sink": {
+						"type": "BlobSink"
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"columnMappings": {
+							"OriginAirportCode": "OriginAirportCode",
+							"Month": "Month",
+							"DayofMonth": "DayofMonth",
+							"CRSDepHour": "CRSDepHour",
+							"DayOfWeek": "DayOfWeek",
+							"Carrier": "Carrier",
+							"DestAirportCode": "DestAirportCode",
+							"DepDel15": "DepDel15",
+							"WindSpeed": "WindSpeed",
+							"SeaLevelPressure": "SeaLevelPressure",
+							"HourlyPrecip": "HourlyPrecip"
+						}
+					}
 				},
 				"inputs": [
 					{
 						"referenceName": "flightdelay_blob_temp",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "flightdelay_blob_raw",
 						"type": "DatasetReference"
 					}
 				]
