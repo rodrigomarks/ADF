@@ -5,6 +5,9 @@
 			"referenceName": "lnklocaldata",
 			"type": "LinkedServiceReference"
 		},
+		"folder": {
+			"name": "local2blob"
+		},
 		"type": "FileShare",
 		"typeProperties": {
 			"format": {

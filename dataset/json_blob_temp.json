@@ -5,6 +5,9 @@
 			"referenceName": "lnkblobrodrigo",
 			"type": "LinkedServiceReference"
 		},
+		"folder": {
+			"name": "local2blob"
+		},
 		"type": "AzureBlob",
 		"typeProperties": {
 			"format": {
