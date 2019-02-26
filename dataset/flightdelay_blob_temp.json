@@ -1,5 +1,5 @@
 {
-	"name": "flightdelay_blob",
+	"name": "flightdelay_blob_temp",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "lnkblobrodrigo",
