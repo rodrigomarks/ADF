@@ -1,0 +1,18 @@
+{
+	"name": "json_blob_temp",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "lnkblobrodrigo",
+			"type": "LinkedServiceReference"
+		},
+		"type": "AzureBlob",
+		"typeProperties": {
+			"format": {
+				"type": "JsonFormat",
+				"filePattern": "setOfObjects"
+			},
+			"fileName": "",
+			"folderPath": "temp/json"
+		}
+	}
+}
