@@ -1,5 +1,5 @@
 {
-	"name": "aml",
+	"name": "aml_predict",
 	"properties": {
 		"activities": [
 			{
