@@ -40,7 +40,10 @@
 				"skipLineCount": 0,
 				"firstRowAsHeader": true
 			},
-			"fileName": "part-00000-tid-7130970756794948286-2568f360-cf8b-4cda-bdef-fc2e2b6f2011-47-c000.csv",
+			"fileName": {
+				"value": "@contains('part','fileName')",
+				"type": "Expression"
+			},
 			"folderPath": "trusted/json"
 		}
 	}
