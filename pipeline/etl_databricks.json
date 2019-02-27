@@ -11,6 +11,13 @@
 					"retryIntervalInSeconds": 30,
 					"secureOutput": false,
 					"secureInput": false
+				},
+				"typeProperties": {
+					"notebookPath": "/lab1/blobscala"
+				},
+				"linkedServiceName": {
+					"referenceName": "lnketljson",
+					"type": "LinkedServiceReference"
 				}
 			}
 		],
