@@ -13,6 +13,9 @@
 					"secureInput": false
 				}
 			}
-		]
+		],
+		"folder": {
+			"name": "etldatabricks"
+		}
 	}
 }

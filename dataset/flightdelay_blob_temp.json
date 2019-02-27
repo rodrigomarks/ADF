@@ -5,6 +5,9 @@
 			"referenceName": "lnkblobrodrigo",
 			"type": "LinkedServiceReference"
 		},
+		"folder": {
+			"name": "flightdelay"
+		},
 		"type": "AzureBlob",
 		"structure": [
 			{
