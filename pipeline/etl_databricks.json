@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Notebook1",
+				"name": "ETL",
 				"type": "DatabricksNotebook",
 				"policy": {
 					"timeout": "7.00:00:00",
@@ -21,11 +21,11 @@
 				}
 			},
 			{
-				"name": "Copy Data1",
+				"name": "Blob_SQLDW",
 				"type": "Copy",
 				"dependsOn": [
 					{
-						"activity": "Notebook1",
+						"activity": "ETL",
 						"dependencyConditions": [
 							"Succeeded"
 						]
