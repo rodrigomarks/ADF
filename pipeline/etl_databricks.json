@@ -5,14 +5,6 @@
 			{
 				"name": "ETL",
 				"type": "DatabricksNotebook",
-				"dependsOn": [
-					{
-						"activity": "Blob_SQLDW",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
 				"policy": {
 					"timeout": "7.00:00:00",
 					"retry": 0,
@@ -31,6 +23,14 @@
 			{
 				"name": "Blob_SQLDW",
 				"type": "Copy",
+				"dependsOn": [
+					{
+						"activity": "ETL",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "7.00:00:00",
 					"retry": 0,
