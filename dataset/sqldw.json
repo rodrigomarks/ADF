@@ -1,0 +1,13 @@
+{
+	"name": "sqldw",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "lnksqldw",
+			"type": "LinkedServiceReference"
+		},
+		"type": "AzureSqlDWTable",
+		"typeProperties": {
+			"tableName": "[dbo].[radio]"
+		}
+	}
+}
