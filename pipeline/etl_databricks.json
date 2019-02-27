@@ -5,6 +5,14 @@
 			{
 				"name": "ETL",
 				"type": "DatabricksNotebook",
+				"dependsOn": [
+					{
+						"activity": "Blob_SQLDW",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "7.00:00:00",
 					"retry": 0,
@@ -23,14 +31,6 @@
 			{
 				"name": "Blob_SQLDW",
 				"type": "Copy",
-				"dependsOn": [
-					{
-						"activity": "ETL",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
 				"policy": {
 					"timeout": "7.00:00:00",
 					"retry": 0,
@@ -39,8 +39,34 @@
 					"secureInput": false
 				},
 				"typeProperties": {
+					"source": {
+						"type": "BlobSource",
+						"recursive": true
+					},
+					"sink": {
+						"type": "SqlDWSink",
+						"allowPolyBase": true,
+						"writeBatchSize": 10000,
+						"polyBaseSettings": {
+							"rejectValue": 0,
+							"rejectType": "value",
+							"useTypeDefault": true
+						}
+					},
 					"enableStaging": false
-				}
+				},
+				"inputs": [
+					{
+						"referenceName": "json_blob_trusted",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "sqldw",
+						"type": "DatasetReference"
+					}
+				]
 			}
 		],
 		"folder": {
