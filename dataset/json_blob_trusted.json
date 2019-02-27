@@ -40,10 +40,7 @@
 				"skipLineCount": 0,
 				"firstRowAsHeader": true
 			},
-			"fileName": {
-				"value": "@contains('part','fileName')",
-				"type": "Expression"
-			},
+			"fileName": "part*.csv",
 			"folderPath": "trusted/json"
 		}
 	}
