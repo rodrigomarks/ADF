@@ -6,6 +6,28 @@
 			"type": "LinkedServiceReference"
 		},
 		"type": "AzureSqlDWTable",
+		"structure": [
+			{
+				"name": "firstname",
+				"type": "String"
+			},
+			{
+				"name": "lastname",
+				"type": "String"
+			},
+			{
+				"name": "gender",
+				"type": "String"
+			},
+			{
+				"name": "locations",
+				"type": "String"
+			},
+			{
+				"name": "subscription",
+				"type": "String"
+			}
+		],
 		"typeProperties": {
 			"tableName": "[dbo].[radio]"
 		}

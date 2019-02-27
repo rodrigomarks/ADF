@@ -48,7 +48,17 @@
 						"allowPolyBase": false,
 						"writeBatchSize": 10000
 					},
-					"enableStaging": false
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"columnMappings": {
+							"firstname": "firstname",
+							"lastname": "lastname",
+							"gender": "gender",
+							"location": "locations",
+							"subscription_type": "subscription"
+						}
+					}
 				},
 				"inputs": [
 					{
