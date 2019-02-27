@@ -1,17 +1,25 @@
 {
 	"name": "json_blob_trusted",
 	"properties": {
+		"linkedServiceName": {
+			"referenceName": "lnkblobrodrigo",
+			"type": "LinkedServiceReference"
+		},
 		"type": "AzureBlob",
 		"typeProperties": {
 			"format": {
 				"type": "TextFormat",
 				"columnDelimiter": ",",
-				"rowDelimiter": "",
+				"rowDelimiter": "\n",
+				"quoteChar": "\"",
 				"nullValue": "\\N",
+				"encodingName": null,
 				"treatEmptyAsNull": true,
 				"skipLineCount": 0,
-				"firstRowAsHeader": false
-			}
+				"firstRowAsHeader": true
+			},
+			"fileName": "part-00000-tid-3435493458685186942-3bcd3cea-f10c-4d9e-9707-61418dc99e73-24-c000.csv",
+			"folderPath": "trusted/json"
 		}
 	}
 }
