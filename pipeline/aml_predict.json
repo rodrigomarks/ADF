@@ -11,6 +11,17 @@
 					"retryIntervalInSeconds": 30,
 					"secureOutput": false,
 					"secureInput": false
+				},
+				"typeProperties": {
+					"webServiceInputs": {
+						"": {
+							"filePath": ""
+						}
+					}
+				},
+				"linkedServiceName": {
+					"referenceName": "lnkmlflight",
+					"type": "LinkedServiceReference"
 				}
 			}
 		],
