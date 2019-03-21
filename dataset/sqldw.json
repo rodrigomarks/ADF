@@ -5,6 +5,9 @@
 			"referenceName": "lnksqldw",
 			"type": "LinkedServiceReference"
 		},
+		"folder": {
+			"name": "databricks"
+		},
 		"type": "AzureSqlDWTable",
 		"structure": [
 			{
