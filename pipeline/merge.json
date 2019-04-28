@@ -18,7 +18,8 @@
 						"recursive": false
 					},
 					"sink": {
-						"type": "AzureBlobFSSink"
+						"type": "AzureBlobFSSink",
+						"copyBehavior": "MergeFiles"
 					},
 					"enableStaging": false
 				},
