@@ -18,6 +18,47 @@
 						"recursive": false
 					},
 					"sink": {
+						"type": "AzureBlobFSSink"
+					},
+					"enableStaging": false
+				},
+				"inputs": [
+					{
+						"referenceName": "dsrawsample",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "dstempsample",
+						"type": "DatasetReference"
+					}
+				]
+			},
+			{
+				"name": "Copy1",
+				"type": "Copy",
+				"dependsOn": [
+					{
+						"activity": "Merge Sample",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"source": {
+						"type": "AzureBlobFSSource",
+						"recursive": true
+					},
+					"sink": {
 						"type": "AzureBlobFSSink",
 						"copyBehavior": "MergeFiles"
 					},
@@ -25,7 +66,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "dsrawsample",
+						"referenceName": "dstempsample",
 						"type": "DatasetReference"
 					}
 				],
