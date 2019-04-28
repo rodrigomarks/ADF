@@ -1,0 +1,14 @@
+{
+	"name": "dsrawsample",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ADLgen2",
+			"type": "LinkedServiceReference"
+		},
+		"type": "AzureBlobFSFile",
+		"typeProperties": {
+			"fileName": "samplefile*.csv",
+			"folderPath": "mtcspdatalakev2/raw"
+		}
+	}
+}
