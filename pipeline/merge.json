@@ -15,13 +15,11 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureBlobFSSource",
-						"recursive": true,
-						"maxConcurrentConnections": 10
+						"recursive": false
 					},
 					"sink": {
 						"type": "AzureBlobFSSink",
-						"copyBehavior": "MergeFiles",
-						"maxConcurrentConnections": 10
+						"copyBehavior": "MergeFiles"
 					},
 					"enableStaging": false
 				},
