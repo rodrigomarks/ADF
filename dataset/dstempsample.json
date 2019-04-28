@@ -17,7 +17,7 @@
 				"skipLineCount": 0,
 				"firstRowAsHeader": false
 			},
-			"fileName": "samplefile*.csv",
+			"fileName": "samplefile.csv",
 			"folderPath": "mtcspdatalakev2/temp"
 		}
 	}
