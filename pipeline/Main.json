@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Sample Files",
+				"name": "ETL",
 				"type": "Copy",
 				"policy": {
 					"timeout": "7.00:00:00",
@@ -14,23 +14,39 @@
 				},
 				"typeProperties": {
 					"source": {
-						"type": "AzureBlobFSSource",
-						"recursive": false
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobFSReadSetting",
+							"recursive": true,
+							"wildcardFileName": "*.csv",
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSetting"
+						}
 					},
 					"sink": {
-						"type": "AzureBlobFSSink"
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSetting"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSetting",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						}
 					},
 					"enableStaging": false
 				},
 				"inputs": [
 					{
-						"referenceName": "dsrawsample",
+						"referenceName": "DLraw",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "dstempsample",
+						"referenceName": "DelimitedText3",
 						"type": "DatasetReference"
 					}
 				]
