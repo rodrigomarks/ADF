@@ -1,0 +1,22 @@
+{
+	"name": "DelimitedText_2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ADLv2",
+			"type": "LinkedServiceReference"
+		},
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "stage",
+				"container": "mtcspdatalakev2"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
