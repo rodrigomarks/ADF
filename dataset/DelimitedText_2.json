@@ -9,6 +9,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"fileName": "FlightDelay.csv",
 				"folderPath": "stage",
 				"container": "mtcspdatalakev2"
 			},
